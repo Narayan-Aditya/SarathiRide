@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "131178763799",
+    "project_id": "sarthi-a146f",
+    "storage_bucket": "sarthi-a146f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131178763799:android:a9ac873788debf9e21ae52",
+        "android_client_info": {
+          "package_name": "com.example.sarathi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131178763799-c04abldpbgnmniddcef1mu0erpbi0rdb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sarathi",
+            "certificate_hash": "cf544b0d60e7e79c74ddfa0f24f62eaccc310939"
+          }
+        },
+        {
+          "client_id": "131178763799-14p8a6qpmk4a9n90ublpfo9ubn63bicf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCGhMDgUsYrbWAZWd0I60vrpaj7_LHA1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131178763799-14p8a6qpmk4a9n90ublpfo9ubn63bicf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/rateUs"
+        android:icon="@drawable/rate_us"
+        android:title="@string/rate_us"/>
+
+    <item android:id="@+id/developer"
+        android:icon="@drawable/developer"
+        android:title="@string/developer"/>
+
+    <item android:id="@+id/sighOut"
+        android:icon="@drawable/sigh_out"
+        android:title="@string/sigh_out"/>
+    <item android:id="@+id/contactUs"
+        android:icon="@drawable/man"
+        android:title="@string/contect_to_dev"/>
+
+</menu>

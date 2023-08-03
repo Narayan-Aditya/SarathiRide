@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">sarathi</string>
+    <string name="enter_mobile_no">Enter Mobile No.</string>
+    <string name="applogo">appLogo</string>
+    <string name="otp">OTP</string>
+    <string name="valid">Valid</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="number">Number</string>
+    <string name="enter_your_number">Enter Your Number</string>
+    <string name="login">Login</string>
+    <string name="enter_your_details">Enter Your Details</string>
+    <string name="name">Name</string>
+    <string name="cityFrom">Form you start</string>
+    <string name="cityTO">Where you GO</string>
+    <string name="save">Save</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="car_number">Car number</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="developer">Developer</string>
+    <string name="sigh_out">Sigh Out</string>
+    <string name="rate_us">Rate us</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="your_details">Your Details</string>
+    <string name="user_name">User Name</string>
+    <string name="user_city">user city</string>
+    <string name="update">Update</string>
+    <string name="enter_your_message">Enter your message</string>
+    <string name="contect_to_dev">Contact to Dev</string>
+    <string name="chat">Chat</string>
+</resources>
