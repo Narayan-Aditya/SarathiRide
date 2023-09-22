@@ -7,6 +7,29 @@
     android:background="@color/splashBg"
     tools:context=".ui.HomeFragment">
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/material"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="12dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerVT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:queryHint="Search here...."
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"/>
+        
+    </com.google.android.material.card.MaterialCardView>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerVT"
         android:layout_width="0dp"
@@ -16,7 +39,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/material"
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/user_item" />
 

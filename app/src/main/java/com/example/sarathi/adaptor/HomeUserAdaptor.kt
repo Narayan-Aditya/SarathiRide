@@ -9,14 +9,21 @@ import com.bumptech.glide.Glide
 import com.example.sarathi.MessageActivity
 import com.example.sarathi.model.UserModel
 import com.example.sarathi.databinding.UserItemBinding
-import com.google.firebase.auth.FirebaseAuth
 
-class HomeUserAdaptor(val context: Context, val list: ArrayList<UserModel>) : RecyclerView.Adapter<HomeUserAdaptor.MessageUserViewHolder>() {
-    inner class MessageUserViewHolder(val binding: UserItemBinding)
-        : RecyclerView.ViewHolder(binding.root)
+class HomeUserAdaptor(val context: Context, val list: ArrayList<UserModel>) :
+    RecyclerView.Adapter<HomeUserAdaptor.MessageUserViewHolder>() {
+    inner class MessageUserViewHolder(val binding: UserItemBinding) :
+        RecyclerView.ViewHolder(binding.root)
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageUserViewHolder {
-        return MessageUserViewHolder(UserItemBinding.inflate(LayoutInflater.from(context),parent,false))
+        return MessageUserViewHolder(
+            UserItemBinding.inflate(
+                LayoutInflater.from(context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun getItemCount(): Int {
@@ -31,11 +38,10 @@ class HomeUserAdaptor(val context: Context, val list: ArrayList<UserModel>) : Re
         holder.binding.userCityBName.text = list[position].cityB
 
 
-
 // this is a item view button which click to open user chat layout and as send the user number.
         holder.itemView.setOnClickListener {
-            val intent = Intent(context,MessageActivity::class.java)
-            intent.putExtra("user_id",list[position].number)
+            val intent = Intent(context, MessageActivity::class.java)
+            intent.putExtra("user_id", list[position].number)
             context.startActivity(intent)
         }
 //        holder.binding.chat.setOnClickListener {

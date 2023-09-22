@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import java.util.Locale
 
 
 class HomeFragment : Fragment() {
@@ -49,6 +50,47 @@ class HomeFragment : Fragment() {
                             }
                         }
                         binding.recyclerVT.adapter = HomeUserAdaptor(requireContext(),list!!)
+
+                        binding.searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{
+                            override fun onQueryTextSubmit(query: String?): Boolean {
+                                return false
+                            }
+
+                            override fun onQueryTextChange(newText: String?): Boolean {
+                                filteredList(newText)
+                                return true
+                            }
+
+                        })
+                    }else{
+                        Toast.makeText(requireContext(),"Something went wrong",Toast.LENGTH_LONG).show()
+                    }
+                }
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(requireContext(),error.message,Toast.LENGTH_SHORT).show()
+                }
+            })
+
+    }
+    private fun filteredList(newText: String?) {
+        FirebaseDatabase.getInstance().getReference("UserData")
+            .addValueEventListener(object: ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()){
+                        list = arrayListOf()
+                        for (data in snapshot.children){
+                            val model = data.getValue(UserModel::class.java)
+                            if(model!!.number != FirebaseAuth.getInstance().currentUser!!.phoneNumber) {
+                                if (newText != null){
+                                    if (model.cityB.toString().lowercase(Locale.ROOT).contains(newText)){
+                                        list!!.add(model)
+                                    }
+                                    binding.recyclerVT.adapter = HomeUserAdaptor(requireContext(),list!!)
+                                }else {
+                                    Toast.makeText(context,"No result found",Toast.LENGTH_SHORT).show()
+                                }
+                            }
+                        }
                     }else{
                         Toast.makeText(requireContext(),"Something went wrong",Toast.LENGTH_LONG).show()
                     }
